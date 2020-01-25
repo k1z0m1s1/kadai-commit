@@ -1,5 +1,14 @@
 <?php
 $result="無し";
+
+if(array_key_exist('act',$_POST)){
+    $result = omikuzi();
+}
+
+function omikuzi(){
+    $fortune = ["大吉","吉","中吉","小吉","末吉","凶"];
+    return $fortune[randam_int(0, count($fortune) -1)];
+}
 ?>
 
 <!DOCTYPE html>
